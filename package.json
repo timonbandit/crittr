@@ -66,6 +66,7 @@
         "@types/object-hash": "^3.0.6",
         "husky": "^9.1.7",
         "release-please": "^17.6.0",
+        "typescript": "5.4.5",
         "vitest": "^4.1.7"
     },
     "scripts": {
@@ -75,8 +76,7 @@
         "build": "tsc && node scripts/copy-evaluation.mjs",
         "typecheck": "tsc --noEmit",
         "lint": "biome check .",
-        "prepublishOnly": "npm run build",
-        "prepare": "husky"
+        "prepare": "npm run build && husky"
     },
     "files": [
         "dist"
